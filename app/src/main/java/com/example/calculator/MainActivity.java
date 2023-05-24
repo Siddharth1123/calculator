@@ -7,7 +7,6 @@ import android.widget.TextView;
 import org.mozilla.javascript.Context;
 import org.mozilla.javascript.Scriptable;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.android.material.button.MaterialButton;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
@@ -40,11 +39,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         assignId(materialButton_minus,R.id.materialButton_minus);
         assignId(materialButton_equal,R.id.materialButton_equal);
         assignId(materialButton_ac,R.id.materialButton_ac);
-
-
-
-
-
     }
     void assignId(MaterialButton btn,int id){
         btn =findViewById(id);
@@ -82,6 +76,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     String getResult(String data) {
 
        try{
+
            Context context = Context.enter();
            context.setOptimizationLevel(-1);
            Scriptable scriptable = context.initStandardObjects();
